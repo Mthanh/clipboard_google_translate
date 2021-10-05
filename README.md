@@ -1,4 +1,4 @@
-# _Pano_Cube_Pano_Convert_
+# _clipboard translate google python_
 
 ------------------
 
@@ -6,27 +6,27 @@
 
 ## 1. Install Python3.x (If python3 is not installed yet)
 
-- Check is python installed?
+- Check if python is installed?
 ```sh
 $ python --version
 $ python3 --version
 ```
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/python_version.png) 
+![Alt text](assert/python_version.png) 
 
 => use python3
 
-- If not install --> Download here https://www.python.org/downloads/
+- If not installed --> Download here https://www.python.org/downloads/
 
 ## 2. Install pip3  (If pip3 is not installed yet)
 
-- Check is pip3 installed?
+- Check if pip3 is installed?
 ```sh
 $ pip3 --version
 ```
 
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/pip_version.png) 
+![Alt text](assert/pip_version.png) 
 
-- If not install --> try below
+- If not installed --> try this below
 ```sh
 $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 $ python3 get-pip.py
@@ -34,60 +34,47 @@ $ python3 get-pip.py
 
 ## 3. Install pakages from requirement.txt 
 ```sh
-$ cd /Path/Project
+$ cd <Path to Project>
 $ pip3 install -r requirements.txt
 ```
 
-## 4. Run
 ```sh
-$ cd /Path/Project
-$ python3 pano_cube_main.py
+# for developer : create requirements.txt
+$ pipreqs . --force
 ```
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/mode1_window.png) 
+
+## 4. Install setup from setup.py 
+```sh
+$ cd <Path to Project>
+$ python3 setup.py install
+```
 
 
-------------------
+# B. Run
+## 5. Run and build
+1. run by double click main.exe inside dist
+2. using cmd "python3 PATH/main.py" 
+3. build by using pycharm, eclipse or something else
 
-# B. Running
+## 6. Deploy to application
+```sh
+$ cd <Path to Project>
 
-## 1. Choose open_folder, save_folder and mask_image by press "open, save, mask"
+#reset
+$ rm -rf build/ dist/
 
-- After choose_open folder, it will automatically load all images name in that folder and list them in the right_List.
+# build
+$ pyinstaller <Path to src>/main.py
 
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/mode1_window.png)
+# or
+$ pyinstaller pano_app.spec
+# or
+$ yes | pyinstaller pano_app.spec
+```
 
-## 2. Mode 1 : Pano -> Cube
+## Note : Translate google
+https://stackoverflow.com/questions/52455774/googletrans-stopped-working-with-error-nonetype-object-has-no-attribute-group
 
-- Click to any item from right_List
-
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/mode1_click.png) 
-
-- Press Run and wait (4~7s)
-
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/mode1_result.png) 
-
-- Show only cube image
-
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/mode1_cube_mode.png)
-
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/mode1_cube_only.png) 
-
-## 3. Mode 2 : Pano -> Cube -> Pano
-
-- Press "Mode 1", it will change to "Mode 2"
-
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/mode2_click.png) 
-
-- Choose image, press Run and wait (4~6s)
-
-![Alt text](https://github.com/xinccojp/Pano_Cube_Pano_Convert/blob/master/assert/mode2_result.png) 
-
-## 4. Result
-
-- After press Run or Run_all, all listed images in the right_List will be processed and then output images will be saved in save_folder.
-
---------
-
-# License
-
-
+```sh
+$ pip install googletrans==3.1.0a0
+```
