@@ -52,7 +52,7 @@ $ python3 setup.py install
 
 # B. Run
 ## 5. Run and build
-1. run by double click main.exe inside dist
+1. run by double click main.exe inside dist. (need to do 6. first)
 2. using cmd "python3 PATH/main.py" 
 3. build by using pycharm, eclipse or something else
 
@@ -78,3 +78,6 @@ https://stackoverflow.com/questions/52455774/googletrans-stopped-working-with-er
 ```sh
 $ pip install googletrans==3.1.0a0
 ```
+
+copy any text and it will automatically translate for you
+![Alt text](assert/project_app.JPG) 
