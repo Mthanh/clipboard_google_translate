@@ -2,6 +2,42 @@
 
 ------------------
 
+## Note : Translate google
+https://stackoverflow.com/questions/52455774/googletrans-stopped-working-with-error-nonetype-object-has-no-attribute-group
+
+```sh
+$ pip install googletrans==3.1.0a0
+```
+
+copy any text and it will automatically translate for you
+
+
+1. translate from browser
+![Alt text](assert/copy_from_browser.png) 
+
+
+2. translate from pdf
+![Alt text](assert/copy_from_pdf.png) 
+
+
+3. translate from pdf + REMOVE_ENTER_PDF
+![Alt text](assert/copy_from_pdf_remove_enter.png) 
+
+
+4. put text into the window
+![Alt text](assert/put_text_to_window.png) 
+
+
+
+
+
+
+
+
+
+
+
+
 # A. Setup
 
 ## 1. Install Python3.x (If python3 is not installed yet)
@@ -71,13 +107,3 @@ $ pyinstaller pano_app.spec
 # or
 $ yes | pyinstaller pano_app.spec
 ```
-
-## Note : Translate google
-https://stackoverflow.com/questions/52455774/googletrans-stopped-working-with-error-nonetype-object-has-no-attribute-group
-
-```sh
-$ pip install googletrans==3.1.0a0
-```
-
-copy any text and it will automatically translate for you
-![Alt text](assert/project_app.JPG) 
