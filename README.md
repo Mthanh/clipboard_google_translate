@@ -2,7 +2,8 @@
 
 ------------------
 This is a simple sample about google translate copy text. Select any text and copy them, it will automatically translate for you.
-
+It is using tkinter gui. 
+It may currently working only on Windows. 
 
 1. translate from browser
 
